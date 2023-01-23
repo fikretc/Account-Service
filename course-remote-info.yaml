@@ -3,14 +3,14 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/612593/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: "Fri, 20 Jan 2023 01:48:04 UTC"
+update_date: "Mon, 23 Jan 2023 07:56:26 UTC"
 stages:
 - id: 1086
   step: 16601
   is_completed: true
 - id: 1087
   step: 16602
-  is_completed: false
+  is_completed: true
 - id: 1088
   step: 16603
   is_completed: false
@@ -399,8 +399,6 @@ topics:
     theory_id: 8611
   - title: Logic and comparison expressions
     theory_id: 8619
-  - title: Basic DELETE statement
-    theory_id: 9075
   - title: The NULL value
     theory_id: 7907
   - title: Intro to MySQL
@@ -409,6 +407,8 @@ topics:
     theory_id: 10521
   - title: Basic INSERT statement
     theory_id: 9059
+  - title: Basic DELETE statement
+    theory_id: 9075
   - title: Basic UPDATE statement
     theory_id: 9067
   - title: JDBC Statements

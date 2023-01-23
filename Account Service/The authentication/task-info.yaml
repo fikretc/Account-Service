@@ -395,7 +395,16 @@ files:
 
     }
   learner_created: true
-- name: src/account/entity/User.java
+- name: src/account/controller/BusinessController.java
+  visible: true
+  learner_created: true
+- name: src/account/security/RestAuthenticationEntryPoint.java
+  visible: true
+  learner_created: true
+- name: src/account/security/SecurityConfiguration.java
+  visible: true
+  learner_created: true
+- name: src/account/entity/UserInfo.java
   visible: true
   text: |
     package account.entity;
@@ -482,6 +491,24 @@ files:
     }
     */
   learner_created: true
-feedback_link: https://hyperskill.org/projects/217/stages/1087/implement#comment
-status: Unchecked
+- name: src/account/business/UserInfoService.java
+  visible: true
+  learner_created: true
+- name: src/account/persistence/UserInfoRepository.java
+  visible: true
+  learner_created: true
+- name: src/account/security/SecurityParams.java
+  visible: true
+  learner_created: true
+- name: account-service.log
+  visible: true
+  learner_created: true
+- name: account-service.log.2023-01-22.0.gz
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/16602#comment
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 23 Jan 2023 11:20:55 UTC"
 record: -1
