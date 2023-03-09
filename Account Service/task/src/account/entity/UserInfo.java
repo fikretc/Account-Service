@@ -14,6 +14,7 @@ import javax.validation.constraints.Pattern;
 @JsonPropertyOrder ({"name","lastname","email","password"})
 public class UserInfo {
 
+
     @Id
     @JsonIgnore
     @Column

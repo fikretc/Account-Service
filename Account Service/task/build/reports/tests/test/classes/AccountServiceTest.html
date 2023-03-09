@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">14.589s</div>
+<div class="counter">44.438s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">start</td>
-<td class="success">14.589s</td>
+<td class="success">44.438s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -98,101 +98,134 @@ Start test 1?[0m
 ?[0m?[0;34m =========|_|==============|___/=/_/_/_/
 ?[0m?[0;34m :: Spring Boot ::                (v2.5.6)
 ?[0m?[0;34m
-?[0m?[0;34m2023-01-23 14:20:40.460  INFO 7233 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication using Java 17.0.4.1 on Ahmets-MacBook-Air.local with PID 7233 (started by ahmetfikretcalikoglu in /Users/ahmetfikretcalikoglu/IdeaProjects/Account-Service/Account Service/task)
-?[0m?[0;34m2023-01-23 14:20:40.462 DEBUG 7233 --- [    Test worker] account.AccountServiceApplication        : Running with Spring Boot v2.5.6, Spring v5.3.12
-?[0m?[0;34m2023-01-23 14:20:40.462  INFO 7233 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
-?[0m?[0;34m2023-01-23 14:20:40.866  INFO 7233 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-?[0m?[0;34m2023-01-23 14:20:40.894  INFO 7233 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interfaces.
-?[0m?[0;34m2023-01-23 14:20:41.178  INFO 7233 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
-?[0m?[0;34m2023-01-23 14:20:41.183  INFO 7233 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-?[0m?[0;34m2023-01-23 14:20:41.184  INFO 7233 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-?[0m?[0;34m2023-01-23 14:20:41.229  INFO 7233 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-?[0m?[0;34m2023-01-23 14:20:41.229  INFO 7233 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 750 ms
-?[0m?[0;34m2023-01-23 14:20:41.282  INFO 7233 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-?[0m?[0;34m2023-01-23 14:20:41.367  INFO 7233 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-?[0m?[0;34m2023-01-23 14:20:41.370  INFO 7233 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../service_db'
-?[0m?[0;34m2023-01-23 14:20:41.437  INFO 7233 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-?[0m?[0;34m2023-01-23 14:20:41.464  INFO 7233 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-?[0m?[0;34m2023-01-23 14:20:41.534  INFO 7233 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-?[0m?[0;34m2023-01-23 14:20:41.582  INFO 7233 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-?[0m?[0;34m2023-01-23 14:20:41.871  INFO 7233 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-?[0m?[0;34m2023-01-23 14:20:41.876  INFO 7233 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-?[0m?[0;34m2023-01-23 14:20:42.070  INFO 7233 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6334c0d8, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f7949dc, org.springframework.security.web.header.HeaderWriterFilter@5f1a3c4, org.springframework.security.web.authentication.logout.LogoutFilter@3fed0c04, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1ce45e18, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3497ecea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6d387e9b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74ed3be4, org.springframework.security.web.session.SessionManagementFilter@54c17a2b, org.springframework.security.web.access.ExceptionTranslationFilter@2433bcd4, org.springframework.security.web.access.intercept.AuthorizationFilter@5b1cedfd]
-?[0m?[0;34m2023-01-23 14:20:42.093  WARN 7233 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-?[0m?[0;34m2023-01-23 14:20:42.317  INFO 7233 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/api/auth/signup'] with []
-?[0m?[0;34m2023-01-23 14:20:42.317  INFO 7233 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/actuator/shutdown'] with []
-?[0m?[0;34m2023-01-23 14:20:42.317  INFO 7233 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/*'] with []
-?[0m?[0;34m2023-01-23 14:20:42.327  INFO 7233 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
-?[0m?[0;34m2023-01-23 14:20:42.346  INFO 7233 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
-?[0m?[0;34m2023-01-23 14:20:42.354  INFO 7233 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 2.076 seconds (JVM running for 2.549)
-?[0;34m2023-01-23 14:20:42.531  INFO 7233 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-?[0m?[0;34m2023-01-23 14:20:42.531  INFO 7233 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-?[0m?[0;34m2023-01-23 14:20:42.532  INFO 7233 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-?[0m?[0;34m2023-01-23 14:20:42.738 DEBUG 7233 --- [io-28852-exec-1] a.controller.AuthenticationController    : POST /api/auth/signup user2 /Id: 1 name: John lastname: Doe email: johndoe@acme.com username: johndoe@acme.com password: $2a$10$4a08mAl8DoOzFQ6ir4CLUOenLr4zUGjX0gToLqWOTRKjETUchcsT6
-?[0;34m2023-01-23 14:20:42.757 DEBUG 7233 --- [io-28852-exec-2] a.controller.AuthenticationController    : POST /api/auth/signup user1 User exist! johndoe@acme.com
+?[0m?[0;34m2023-03-05 00:04:58.304  INFO 70306 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication using Java 17.0.4.1 on Ahmets-MacBook-Air.local with PID 70306 (started by ahmetfikretcalikoglu in /Users/ahmetfikretcalikoglu/IdeaProjects/Account-Service/Account Service/task)
+?[0m?[0;34m2023-03-05 00:04:58.306 DEBUG 70306 --- [    Test worker] account.AccountServiceApplication        : Running with Spring Boot v2.5.6, Spring v5.3.12
+?[0m?[0;34m2023-03-05 00:04:58.306  INFO 70306 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
+?[0m?[0;34m2023-03-05 00:04:58.700  INFO 70306 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2023-03-05 00:04:58.721  INFO 70306 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interfaces.
+?[0m?[0;34m2023-03-05 00:04:58.982  INFO 70306 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+?[0m?[0;34m2023-03-05 00:04:58.987  INFO 70306 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2023-03-05 00:04:58.987  INFO 70306 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+?[0m?[0;34m2023-03-05 00:04:59.031  INFO 70306 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2023-03-05 00:04:59.032  INFO 70306 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 707 ms
+?[0m?[0;34m2023-03-05 00:04:59.086  INFO 70306 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+?[0m?[0;34m2023-03-05 00:04:59.164  INFO 70306 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+?[0m?[0;34m2023-03-05 00:04:59.167  INFO 70306 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../service_db'
+?[0m?[0;34m2023-03-05 00:04:59.240  INFO 70306 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2023-03-05 00:04:59.261  INFO 70306 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+?[0m?[0;34m2023-03-05 00:04:59.331  INFO 70306 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+?[0m?[0;34m2023-03-05 00:04:59.375  INFO 70306 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+?[0m?[0;34m2023-03-05 00:04:59.647  INFO 70306 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+?[0m?[0;34m2023-03-05 00:04:59.650  INFO 70306 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2023-03-05 00:04:59.835  INFO 70306 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2319c1e0, org.springframework.security.web.context.SecurityContextPersistenceFilter@3180131e, org.springframework.security.web.header.HeaderWriterFilter@39007725, org.springframework.security.web.authentication.logout.LogoutFilter@58b30e3e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@260ccf0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b8a063d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@397f925e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@659e003e, org.springframework.security.web.session.SessionManagementFilter@350d9d23, org.springframework.security.web.access.ExceptionTranslationFilter@7528089c, org.springframework.security.web.access.intercept.AuthorizationFilter@66cb9a63]
+?[0m?[0;34m2023-03-05 00:04:59.854  WARN 70306 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2023-03-05 00:05:00.073  INFO 70306 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/api/auth/signup'] with []
+?[0m?[0;34m2023-03-05 00:05:00.073  INFO 70306 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/actuator/shutdown'] with []
+?[0m?[0;34m2023-03-05 00:05:00.074  INFO 70306 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/*'] with []
+?[0m?[0;34m2023-03-05 00:05:00.084  INFO 70306 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+?[0m?[0;34m2023-03-05 00:05:00.103  INFO 70306 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
+?[0m?[0;34m2023-03-05 00:05:00.111  INFO 70306 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 2.171 seconds (JVM running for 2.598)
+?[0;34m2023-03-05 00:05:00.280  INFO 70306 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+?[0m?[0;34m2023-03-05 00:05:00.280  INFO 70306 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+?[0m?[0;34m2023-03-05 00:05:00.281  INFO 70306 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+?[0m?[0;34m2023-03-05 00:05:00.345  WARN 70306 --- [io-28852-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity account.controller.AuthenticationController.signupEndpoint(account.entity.UserInfo): [Field error in object 'userInfo' on field 'name': rejected value []; codes [NotEmpty.userInfo.name,NotEmpty.name,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.name,name]; arguments []; default message [name]]; default message [must not be empty]] ]
 ?[0m?[1;31m
 Start test 2?[0m
-?[0;34m2023-01-23 14:20:42.769 DEBUG 7233 --- [io-28852-exec-3] a.controller.AuthenticationController    : POST /api/auth/signup user1 User exist! johndoe@acme.com
+?[0;34m2023-03-05 00:05:00.369  WARN 70306 --- [io-28852-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity account.controller.AuthenticationController.signupEndpoint(account.entity.UserInfo): [Field error in object 'userInfo' on field 'name': rejected value [null]; codes [NotEmpty.userInfo.name,NotEmpty.name,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.name,name]; arguments []; default message [name]]; default message [must not be empty]] ]
 ?[1;31m
 Start test 3?[0m
-?[0;34m2023-01-23 14:20:42.775 DEBUG 7233 --- [io-28852-exec-4] a.controller.AuthenticationController    : POST /api/auth/signup user1 User exist! johndoe@acme.com
+?[0;34m2023-03-05 00:05:00.375  WARN 70306 --- [io-28852-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity account.controller.AuthenticationController.signupEndpoint(account.entity.UserInfo): [Field error in object 'userInfo' on field 'lastname': rejected value []; codes [NotEmpty.userInfo.lastname,NotEmpty.lastname,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.lastname,lastname]; arguments []; default message [lastname]]; default message [must not be empty]] ]
 ?[1;31m
 Start test 4?[0m
-?[0;34m2023-01-23 14:20:42.781 DEBUG 7233 --- [io-28852-exec-5] a.controller.AuthenticationController    : POST /api/auth/signup user1 User exist! johndoe@acme.com
+?[0;34m2023-03-05 00:05:00.380  WARN 70306 --- [io-28852-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity account.controller.AuthenticationController.signupEndpoint(account.entity.UserInfo): [Field error in object 'userInfo' on field 'lastname': rejected value [null]; codes [NotEmpty.userInfo.lastname,NotEmpty.lastname,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.lastname,lastname]; arguments []; default message [lastname]]; default message [must not be empty]] ]
 ?[1;31m
 Start test 5?[0m
-?[0;34m2023-01-23 14:20:42.863 DEBUG 7233 --- [io-28852-exec-6] a.controller.AuthenticationController    : POST /api/auth/signup user2 /Id: 2 name: Max lastname: Mustermann email: maxmustermann@acme.com username: maxmustermann@acme.com password: $2a$10$OEO9GE43tU8MrRhwFfhgbuZJ0GpCQw5dMxagFdk3.f/NI9far43cO
-?[0;34m2023-01-23 14:20:42.869 DEBUG 7233 --- [io-28852-exec-7] a.controller.AuthenticationController    : POST /api/auth/signup user1 User exist! maxmustermann@acme.com
+?[0;34m2023-03-05 00:05:00.387  WARN 70306 --- [io-28852-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity account.controller.AuthenticationController.signupEndpoint(account.entity.UserInfo) with 2 errors: [Field error in object 'userInfo' on field 'email': rejected value []; codes [Pattern.userInfo.email,Pattern.email,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@1707609e,^[a-zA-Z0-9_!#$%&amp;'*+/=?`{|}~^.-]+@acme.com]; default message [must match &quot;^[a-zA-Z0-9_!#$%&amp;'*+/=?`{|}~^.-]+@acme.com&quot;]] [Field error in object 'userInfo' on field 'email': rejected value []; codes [NotEmpty.userInfo.email,NotEmpty.email,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.email,email]; arguments []; default message [email]]; default message [must not be empty]] ]
 ?[1;31m
 Start test 6?[0m
-?[0;34m2023-01-23 14:20:42.874 DEBUG 7233 --- [io-28852-exec-8] a.controller.AuthenticationController    : POST /api/auth/signup user1 User exist! maxmustermann@acme.com
+?[0;34m2023-03-05 00:05:00.393  WARN 70306 --- [io-28852-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity account.controller.AuthenticationController.signupEndpoint(account.entity.UserInfo): [Field error in object 'userInfo' on field 'email': rejected value [null]; codes [NotEmpty.userInfo.email,NotEmpty.email,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.email,email]; arguments []; default message [email]]; default message [must not be empty]] ]
 ?[1;31m
 Start test 7?[0m
-?[0;34m2023-01-23 14:20:42.879 DEBUG 7233 --- [io-28852-exec-9] a.controller.AuthenticationController    : POST /api/auth/signup user1 User exist! maxmustermann@acme.com
+?[0;34m2023-03-05 00:05:00.399  WARN 70306 --- [io-28852-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity account.controller.AuthenticationController.signupEndpoint(account.entity.UserInfo): [Field error in object 'userInfo' on field 'password': rejected value []; codes [NotEmpty.userInfo.password,NotEmpty.password,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.password,password]; arguments []; default message [password]]; default message [must not be empty]] ]
 ?[1;31m
 Start test 8?[0m
-?[0;34m2023-01-23 14:20:42.893  WARN 7233 --- [o-28852-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity account.controller.AuthenticationController.signupEndpoint(account.entity.UserInfo): [Field error in object 'userInfo' on field 'name': rejected value []; codes [NotEmpty.userInfo.name,NotEmpty.name,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.name,name]; arguments []; default message [name]]; default message [must not be empty]] ]
+?[0;34m2023-03-05 00:05:00.404  WARN 70306 --- [io-28852-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity account.controller.AuthenticationController.signupEndpoint(account.entity.UserInfo): [Field error in object 'userInfo' on field 'password': rejected value [null]; codes [NotEmpty.userInfo.password,NotEmpty.password,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.password,password]; arguments []; default message [password]]; default message [must not be empty]] ]
 ?[1;31m
 Start test 9?[0m
-?[0m?[0;34m2023-01-23 14:20:42.906  WARN 7233 --- [io-28852-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity account.controller.AuthenticationController.signupEndpoint(account.entity.UserInfo): [Field error in object 'userInfo' on field 'name': rejected value [null]; codes [NotEmpty.userInfo.name,NotEmpty.name,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.name,name]; arguments []; default message [name]]; default message [must not be empty]] ]
+?[0;34m2023-03-05 00:05:00.410  WARN 70306 --- [io-28852-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity account.controller.AuthenticationController.signupEndpoint(account.entity.UserInfo) with 2 errors: [Field error in object 'userInfo' on field 'email': rejected value [johndoeacme.com]; codes [Pattern.userInfo.email,Pattern.email,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@1707609e,^[a-zA-Z0-9_!#$%&amp;'*+/=?`{|}~^.-]+@acme.com]; default message [must match &quot;^[a-zA-Z0-9_!#$%&amp;'*+/=?`{|}~^.-]+@acme.com&quot;]] [Field error in object 'userInfo' on field 'email': rejected value [johndoeacme.com]; codes [Email.userInfo.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@65a306f0,.*]; default message [must be a well-formed email address]] ]
 ?[1;31m
 Start test 10?[0m
-?[0m?[0;34m2023-01-23 14:20:42.911  WARN 7233 --- [io-28852-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity account.controller.AuthenticationController.signupEndpoint(account.entity.UserInfo): [Field error in object 'userInfo' on field 'lastname': rejected value []; codes [NotEmpty.userInfo.lastname,NotEmpty.lastname,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.lastname,lastname]; arguments []; default message [lastname]]; default message [must not be empty]] ]
+?[0;34m2023-03-05 00:05:00.415  WARN 70306 --- [o-28852-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity account.controller.AuthenticationController.signupEndpoint(account.entity.UserInfo): [Field error in object 'userInfo' on field 'email': rejected value [johndoe@google.com]; codes [Pattern.userInfo.email,Pattern.email,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@1707609e,^[a-zA-Z0-9_!#$%&amp;'*+/=?`{|}~^.-]+@acme.com]; default message [must match &quot;^[a-zA-Z0-9_!#$%&amp;'*+/=?`{|}~^.-]+@acme.com&quot;]] ]
 ?[1;31m
 Start test 11?[0m
-?[0m?[0;34m2023-01-23 14:20:42.916  WARN 7233 --- [io-28852-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity account.controller.AuthenticationController.signupEndpoint(account.entity.UserInfo): [Field error in object 'userInfo' on field 'lastname': rejected value [null]; codes [NotEmpty.userInfo.lastname,NotEmpty.lastname,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.lastname,lastname]; arguments []; default message [lastname]]; default message [must not be empty]] ]
+?[0m?[0;34m2023-03-05 00:05:00.425 DEBUG 70306 --- [io-28852-exec-1] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! johndoe@acme.com
+?[0m?[0;34m2023-03-05 00:05:00.483 DEBUG 70306 --- [io-28852-exec-1] a.controller.AuthenticationController    : POST api/auth/signup user2 PasswordForJanuaryThe password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:00.491 DEBUG 70306 --- [io-28852-exec-2] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! johndoe@acme.com
+?[0m?[0;34m2023-03-05 00:05:00.492 DEBUG 70306 --- [io-28852-exec-2] a.controller.AuthenticationController    : POST api/auth/signup user2 PasswordForFebruaryThe password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:00.495 DEBUG 70306 --- [io-28852-exec-3] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! johndoe@acme.com
+?[0m?[0;34m2023-03-05 00:05:00.496 DEBUG 70306 --- [io-28852-exec-3] a.controller.AuthenticationController    : POST api/auth/signup user2 PasswordForMarchThe password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:00.500 DEBUG 70306 --- [io-28852-exec-4] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! johndoe@acme.com
+?[0m?[0;34m2023-03-05 00:05:00.500 DEBUG 70306 --- [io-28852-exec-4] a.controller.AuthenticationController    : POST api/auth/signup user2 PasswordForAprilThe password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:00.505 DEBUG 70306 --- [io-28852-exec-5] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! johndoe@acme.com
+?[0m?[0;34m2023-03-05 00:05:00.505 DEBUG 70306 --- [io-28852-exec-5] a.controller.AuthenticationController    : POST api/auth/signup user2 PasswordForMayThe password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:00.509 DEBUG 70306 --- [io-28852-exec-6] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! johndoe@acme.com
+?[0m?[0;34m2023-03-05 00:05:00.510 DEBUG 70306 --- [io-28852-exec-6] a.controller.AuthenticationController    : POST api/auth/signup user2 PasswordForJuneThe password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:00.514 DEBUG 70306 --- [io-28852-exec-7] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! johndoe@acme.com
+?[0m?[0;34m2023-03-05 00:05:00.515 DEBUG 70306 --- [io-28852-exec-7] a.controller.AuthenticationController    : POST api/auth/signup user2 PasswordForJulyThe password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:00.519 DEBUG 70306 --- [io-28852-exec-8] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! johndoe@acme.com
+?[0m?[0;34m2023-03-05 00:05:00.519 DEBUG 70306 --- [io-28852-exec-8] a.controller.AuthenticationController    : POST api/auth/signup user2 PasswordForAugustThe password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:00.523 DEBUG 70306 --- [io-28852-exec-9] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! johndoe@acme.com
+?[0m?[0;34m2023-03-05 00:05:00.524 DEBUG 70306 --- [io-28852-exec-9] a.controller.AuthenticationController    : POST api/auth/signup user2 PasswordForSeptemberThe password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:00.528 DEBUG 70306 --- [o-28852-exec-10] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! johndoe@acme.com
+?[0m?[0;34m2023-03-05 00:05:00.529 DEBUG 70306 --- [o-28852-exec-10] a.controller.AuthenticationController    : POST api/auth/signup user2 PasswordForOctoberThe password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:00.532 DEBUG 70306 --- [io-28852-exec-1] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! johndoe@acme.com
+?[0m?[0;34m2023-03-05 00:05:00.533 DEBUG 70306 --- [io-28852-exec-1] a.controller.AuthenticationController    : POST api/auth/signup user2 PasswordForNovemberThe password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:00.537 DEBUG 70306 --- [io-28852-exec-2] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! johndoe@acme.com
+?[0m?[0;34m2023-03-05 00:05:00.538 DEBUG 70306 --- [io-28852-exec-2] a.controller.AuthenticationController    : POST api/auth/signup user2 PasswordForDecemberThe password is in the hacker's database!
 ?[1;31m
 Start test 12?[0m
-?[0m?[0;34m2023-01-23 14:20:42.923  WARN 7233 --- [io-28852-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity account.controller.AuthenticationController.signupEndpoint(account.entity.UserInfo) with 2 errors: [Field error in object 'userInfo' on field 'email': rejected value []; codes [NotEmpty.userInfo.email,NotEmpty.email,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.email,email]; arguments []; default message [email]]; default message [must not be empty]] [Field error in object 'userInfo' on field 'email': rejected value []; codes [Pattern.userInfo.email,Pattern.email,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@4431efbb,^[a-zA-Z0-9_!#$%&amp;'*+/=?`{|}~^.-]+@acme.com]; default message [must match &quot;^[a-zA-Z0-9_!#$%&amp;'*+/=?`{|}~^.-]+@acme.com&quot;]] ]
+?[0m?[0;34m2023-03-05 00:05:00.542 DEBUG 70306 --- [io-28852-exec-3] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! johndoe@acme.com
+?[0m?[0;34m2023-03-05 00:05:01.170 DEBUG 70306 --- [io-28852-exec-3] a.controller.AuthenticationController    : POST /api/auth/signup user3 /Id: 1 name: John lastname: Doe email: johndoe@acme.com username: johndoe@acme.com password: $2a$13$ryKXFM0w7kMZMUmfsMvyFOhHmEEbimnaSh2by6V4I8Bj4w1dz0g3u
+?[0m?[0;34m2023-03-05 00:05:01.177 DEBUG 70306 --- [io-28852-exec-4] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! johndoe@acme.com
+?[0m?[0;34m2023-03-05 00:05:01.180 DEBUG 70306 --- [io-28852-exec-4] a.controller.AuthenticationController    : POST /api/auth/signup user1 User exist! johndoe@acme.com
 ?[1;31m
 Start test 13?[0m
-?[0m?[0;34m2023-01-23 14:20:42.928  WARN 7233 --- [io-28852-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity account.controller.AuthenticationController.signupEndpoint(account.entity.UserInfo): [Field error in object 'userInfo' on field 'lastname': rejected value [null]; codes [NotEmpty.userInfo.lastname,NotEmpty.lastname,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.lastname,lastname]; arguments []; default message [lastname]]; default message [must not be empty]] ]
+?[0m?[0;34m2023-03-05 00:05:01.186 DEBUG 70306 --- [io-28852-exec-5] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! johndoe@acme.com
+?[0m?[0;34m2023-03-05 00:05:01.187 DEBUG 70306 --- [io-28852-exec-5] a.controller.AuthenticationController    : POST /api/auth/signup user1 User exist! johndoe@acme.com
 ?[1;31m
 Start test 14?[0m
-?[0m?[0;34m2023-01-23 14:20:42.935  WARN 7233 --- [io-28852-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity account.controller.AuthenticationController.signupEndpoint(account.entity.UserInfo): [Field error in object 'userInfo' on field 'password': rejected value []; codes [NotEmpty.userInfo.password,NotEmpty.password,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.password,password]; arguments []; default message [password]]; default message [must not be empty]] ]
+?[0m?[0;34m2023-03-05 00:05:01.191 DEBUG 70306 --- [io-28852-exec-6] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! johndoe@acme.com
+?[0m?[0;34m2023-03-05 00:05:01.192 DEBUG 70306 --- [io-28852-exec-6] a.controller.AuthenticationController    : POST /api/auth/signup user1 User exist! johndoe@acme.com
 ?[1;31m
 Start test 15?[0m
-?[0m?[0;34m2023-01-23 14:20:42.940  WARN 7233 --- [io-28852-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity account.controller.AuthenticationController.signupEndpoint(account.entity.UserInfo): [Field error in object 'userInfo' on field 'password': rejected value [null]; codes [NotEmpty.userInfo.password,NotEmpty.password,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.password,password]; arguments []; default message [password]]; default message [must not be empty]] ]
+?[0m?[0;34m2023-03-05 00:05:01.196 DEBUG 70306 --- [io-28852-exec-7] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! johndoe@acme.com
+?[0m?[0;34m2023-03-05 00:05:01.197 DEBUG 70306 --- [io-28852-exec-7] a.controller.AuthenticationController    : POST /api/auth/signup user1 User exist! johndoe@acme.com
 ?[1;31m
 Start test 16?[0m
-?[0m?[0;34m2023-01-23 14:20:42.946  WARN 7233 --- [io-28852-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity account.controller.AuthenticationController.signupEndpoint(account.entity.UserInfo) with 2 errors: [Field error in object 'userInfo' on field 'email': rejected value [johndoeacme.com]; codes [Email.userInfo.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@3991a222,.*]; default message [must be a well-formed email address]] [Field error in object 'userInfo' on field 'email': rejected value [johndoeacme.com]; codes [Pattern.userInfo.email,Pattern.email,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@4431efbb,^[a-zA-Z0-9_!#$%&amp;'*+/=?`{|}~^.-]+@acme.com]; default message [must match &quot;^[a-zA-Z0-9_!#$%&amp;'*+/=?`{|}~^.-]+@acme.com&quot;]] ]
+?[0m?[0;34m2023-03-05 00:05:01.201 DEBUG 70306 --- [io-28852-exec-8] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! maxmustermann@acme.com
+?[0m?[0;34m2023-03-05 00:05:01.810 DEBUG 70306 --- [io-28852-exec-8] a.controller.AuthenticationController    : POST /api/auth/signup user3 /Id: 2 name: Max lastname: Mustermann email: maxmustermann@acme.com username: maxmustermann@acme.com password: $2a$13$d0C8tfMaxhVmdOLR3cZWAuo91hw9Sj9LvP1FGtSfoVYpwVAKl4IPS
+?[0m?[0;34m2023-03-05 00:05:01.814 DEBUG 70306 --- [o-28852-exec-10] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! maxmustermann@acme.com
+?[0m?[0;34m2023-03-05 00:05:01.815 DEBUG 70306 --- [o-28852-exec-10] a.controller.AuthenticationController    : POST /api/auth/signup user1 User exist! maxmustermann@acme.com
 ?[1;31m
 Start test 17?[0m
-?[0m?[0;34m2023-01-23 14:20:42.951  WARN 7233 --- [io-28852-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity account.controller.AuthenticationController.signupEndpoint(account.entity.UserInfo): [Field error in object 'userInfo' on field 'email': rejected value [johndoe@google.com]; codes [Pattern.userInfo.email,Pattern.email,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userInfo.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@4431efbb,^[a-zA-Z0-9_!#$%&amp;'*+/=?`{|}~^.-]+@acme.com]; default message [must match &quot;^[a-zA-Z0-9_!#$%&amp;'*+/=?`{|}~^.-]+@acme.com&quot;]] ]
+?[0m?[0;34m2023-03-05 00:05:01.819 DEBUG 70306 --- [io-28852-exec-1] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! maxmustermann@acme.com
+?[0m?[0;34m2023-03-05 00:05:01.820 DEBUG 70306 --- [io-28852-exec-1] a.controller.AuthenticationController    : POST /api/auth/signup user1 User exist! maxmustermann@acme.com
 ?[1;31m
 Start test 18?[0m
-?[0m?[0;34m2023-01-23 14:20:43.121 DEBUG 7233 --- [o-28852-exec-10] account.controller.BusinessController    : GET /api/empl/payment1 /Id: 1 name: John lastname: Doe email: johndoe@acme.com username: johndoe@acme.com password: $2a$10$4a08mAl8DoOzFQ6ir4CLUOenLr4zUGjX0gToLqWOTRKjETUchcsT6
+?[0m?[0;34m2023-03-05 00:05:01.824 DEBUG 70306 --- [io-28852-exec-2] a.controller.AuthenticationController    : POST /api/auth/signup user0 ! maxmustermann@acme.com
+?[0m?[0;34m2023-03-05 00:05:01.824 DEBUG 70306 --- [io-28852-exec-2] a.controller.AuthenticationController    : POST /api/auth/signup user1 User exist! maxmustermann@acme.com
 ?[1;31m
 Start test 19?[0m
-?[0m?[0;34m2023-01-23 14:20:43.204 DEBUG 7233 --- [io-28852-exec-1] account.controller.BusinessController    : GET /api/empl/payment1 /Id: 1 name: John lastname: Doe email: johndoe@acme.com username: johndoe@acme.com password: $2a$10$4a08mAl8DoOzFQ6ir4CLUOenLr4zUGjX0gToLqWOTRKjETUchcsT6
+?[0m?[0;34m2023-03-05 00:05:03.043 DEBUG 70306 --- [io-28852-exec-3] account.controller.BusinessController    : GET /api/empl/payment1 /Id: 1 name: John lastname: Doe email: johndoe@acme.com username: johndoe@acme.com password: $2a$13$ryKXFM0w7kMZMUmfsMvyFOhHmEEbimnaSh2by6V4I8Bj4w1dz0g3u
 ?[1;31m
 Start test 20?[0m
-?[0m?[0;34m2023-01-23 14:20:43.284 DEBUG 7233 --- [io-28852-exec-2] account.controller.BusinessController    : GET /api/empl/payment1 /Id: 2 name: Max lastname: Mustermann email: maxmustermann@acme.com username: maxmustermann@acme.com password: $2a$10$OEO9GE43tU8MrRhwFfhgbuZJ0GpCQw5dMxagFdk3.f/NI9far43cO
+?[0m?[0;34m2023-03-05 00:05:03.650 DEBUG 70306 --- [io-28852-exec-5] account.controller.BusinessController    : GET /api/empl/payment1 /Id: 1 name: John lastname: Doe email: johndoe@acme.com username: johndoe@acme.com password: $2a$13$ryKXFM0w7kMZMUmfsMvyFOhHmEEbimnaSh2by6V4I8Bj4w1dz0g3u
 ?[1;31m
 Start test 21?[0m
-?[0m?[0;34m2023-01-23 14:20:43.364 DEBUG 7233 --- [io-28852-exec-3] account.controller.BusinessController    : GET /api/empl/payment1 /Id: 2 name: Max lastname: Mustermann email: maxmustermann@acme.com username: maxmustermann@acme.com password: $2a$10$OEO9GE43tU8MrRhwFfhgbuZJ0GpCQw5dMxagFdk3.f/NI9far43cO
+?[0m?[0;34m2023-03-05 00:05:04.256 DEBUG 70306 --- [io-28852-exec-6] account.controller.BusinessController    : GET /api/empl/payment1 /Id: 2 name: Max lastname: Mustermann email: maxmustermann@acme.com username: maxmustermann@acme.com password: $2a$13$d0C8tfMaxhVmdOLR3cZWAuo91hw9Sj9LvP1FGtSfoVYpwVAKl4IPS
 ?[1;31m
 Start test 22?[0m
+?[0m?[0;34m2023-03-05 00:05:04.870 DEBUG 70306 --- [io-28852-exec-8] account.controller.BusinessController    : GET /api/empl/payment1 /Id: 2 name: Max lastname: Mustermann email: maxmustermann@acme.com username: maxmustermann@acme.com password: $2a$13$d0C8tfMaxhVmdOLR3cZWAuo91hw9Sj9LvP1FGtSfoVYpwVAKl4IPS
 ?[1;31m
 Start test 23?[0m
 ?[1;31m
@@ -205,9 +238,93 @@ Start test 26?[0m
 Start test 27?[0m
 ?[1;31m
 Start test 28?[0m
-?[0;34m2023-01-23 14:20:44.324  INFO 7233 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-?[0m?[0;34m2023-01-23 14:20:44.326  INFO 7233 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-?[0m?[0;34m2023-01-23 14:20:44.374  INFO 7233 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+?[1;31m
+Start test 29?[0m
+?[0m?[0;34m2023-03-05 00:05:07.893 DEBUG 70306 --- [io-28852-exec-8] a.controller.AuthenticationController    : POST api/auth/changepass0 o
+?[0m?[0;34m2023-03-05 00:05:07.893 DEBUG 70306 --- [io-28852-exec-8] a.controller.AuthenticationController    : POST api/auth/changepass1 o Password length must be 12 chars minimum!
+?[1;31m
+Start test 30?[0m
+?[0m?[0;34m2023-03-05 00:05:08.496 DEBUG 70306 --- [io-28852-exec-7] a.controller.AuthenticationController    : POST api/auth/changepass0 oMoa3VvqnLxW
+?[0m?[0;34m2023-03-05 00:05:09.096 DEBUG 70306 --- [io-28852-exec-7] a.controller.AuthenticationController    : POST api/auth/changepass1 oMoa3VvqnLxW The passwords must be different!
+?[1;31m
+Start test 31?[0m
+?[0m?[0;34m2023-03-05 00:05:09.709 DEBUG 70306 --- [io-28852-exec-5] a.controller.AuthenticationController    : POST api/auth/changepass0 o
+?[0m?[0;34m2023-03-05 00:05:09.709 DEBUG 70306 --- [io-28852-exec-5] a.controller.AuthenticationController    : POST api/auth/changepass1 o Password length must be 12 chars minimum!
+?[1;31m
+Start test 32?[0m
+?[0m?[0;34m2023-03-05 00:05:10.309 DEBUG 70306 --- [io-28852-exec-9] a.controller.AuthenticationController    : POST api/auth/changepass0 oM
+?[0m?[0;34m2023-03-05 00:05:10.309 DEBUG 70306 --- [io-28852-exec-9] a.controller.AuthenticationController    : POST api/auth/changepass1 oM Password length must be 12 chars minimum!
+?[1;31m
+Start test 33?[0m
+?[0m?[0;34m2023-03-05 00:05:10.916 DEBUG 70306 --- [io-28852-exec-6] a.controller.AuthenticationController    : POST api/auth/changepass0 oMo
+?[0m?[0;34m2023-03-05 00:05:10.917 DEBUG 70306 --- [io-28852-exec-6] a.controller.AuthenticationController    : POST api/auth/changepass1 oMo Password length must be 12 chars minimum!
+?[1;31m
+Start test 34?[0m
+?[0m?[0;34m2023-03-05 00:05:11.529 DEBUG 70306 --- [o-28852-exec-10] a.controller.AuthenticationController    : POST api/auth/changepass0 oMoa
+?[0m?[0;34m2023-03-05 00:05:11.529 DEBUG 70306 --- [o-28852-exec-10] a.controller.AuthenticationController    : POST api/auth/changepass1 oMoa Password length must be 12 chars minimum!
+?[1;31m
+Start test 35?[0m
+?[0m?[0;34m2023-03-05 00:05:12.131 DEBUG 70306 --- [io-28852-exec-1] a.controller.AuthenticationController    : POST api/auth/changepass0 oMoa3
+?[0m?[0;34m2023-03-05 00:05:12.132 DEBUG 70306 --- [io-28852-exec-1] a.controller.AuthenticationController    : POST api/auth/changepass1 oMoa3 Password length must be 12 chars minimum!
+?[1;31m
+Start test 36?[0m
+?[0m?[0;34m2023-03-05 00:05:12.739 DEBUG 70306 --- [io-28852-exec-3] a.controller.AuthenticationController    : POST api/auth/changepass0 oMoa3V
+?[0m?[0;34m2023-03-05 00:05:12.739 DEBUG 70306 --- [io-28852-exec-3] a.controller.AuthenticationController    : POST api/auth/changepass1 oMoa3V Password length must be 12 chars minimum!
+?[1;31m
+Start test 37?[0m
+?[0m?[0;34m2023-03-05 00:05:13.348 DEBUG 70306 --- [io-28852-exec-2] a.controller.AuthenticationController    : POST api/auth/changepass0 oMoa3Vv
+?[0m?[0;34m2023-03-05 00:05:13.348 DEBUG 70306 --- [io-28852-exec-2] a.controller.AuthenticationController    : POST api/auth/changepass1 oMoa3Vv Password length must be 12 chars minimum!
+?[1;31m
+Start test 38?[0m
+?[0m?[0;34m2023-03-05 00:05:13.951 DEBUG 70306 --- [io-28852-exec-4] a.controller.AuthenticationController    : POST api/auth/changepass0 oMoa3Vvq
+?[0m?[0;34m2023-03-05 00:05:13.951 DEBUG 70306 --- [io-28852-exec-4] a.controller.AuthenticationController    : POST api/auth/changepass1 oMoa3Vvq Password length must be 12 chars minimum!
+?[1;31m
+Start test 39?[0m
+?[0m?[0;34m2023-03-05 00:05:14.562 DEBUG 70306 --- [io-28852-exec-8] a.controller.AuthenticationController    : POST api/auth/changepass0 oMoa3Vvqn
+?[0m?[0;34m2023-03-05 00:05:14.562 DEBUG 70306 --- [io-28852-exec-8] a.controller.AuthenticationController    : POST api/auth/changepass1 oMoa3Vvqn Password length must be 12 chars minimum!
+?[1;31m
+Start test 40?[0m
+?[0m?[0;34m2023-03-05 00:05:15.165 DEBUG 70306 --- [io-28852-exec-7] a.controller.AuthenticationController    : POST api/auth/changepass0 oMoa3Vvqno
+?[0m?[0;34m2023-03-05 00:05:15.166 DEBUG 70306 --- [io-28852-exec-7] a.controller.AuthenticationController    : POST api/auth/changepass1 oMoa3Vvqno Password length must be 12 chars minimum!
+?[1;31m
+Start test 41?[0m
+?[0m?[0;34m2023-03-05 00:05:15.769 DEBUG 70306 --- [io-28852-exec-5] a.controller.AuthenticationController    : POST api/auth/changepass0 oMoa3VvqnoM
+?[0m?[0;34m2023-03-05 00:05:15.769 DEBUG 70306 --- [io-28852-exec-5] a.controller.AuthenticationController    : POST api/auth/changepass1 oMoa3VvqnoM Password length must be 12 chars minimum!
+?[1;31m
+Start test 42?[0m
+?[0m?[0;34m2023-03-05 00:05:16.381 DEBUG 70306 --- [io-28852-exec-9] a.controller.AuthenticationController    : POST api/auth/changepass0 oMoa3VvqnLxW
+?[0m?[0;34m2023-03-05 00:05:16.982 DEBUG 70306 --- [io-28852-exec-9] a.controller.AuthenticationController    : POST api/auth/changepass1 oMoa3VvqnLxW The passwords must be different!
+?[1;31m
+Start test 43?[0m
+?[0m?[0;34m2023-03-05 00:05:17.590 DEBUG 70306 --- [io-28852-exec-6] a.controller.AuthenticationController    : POST api/auth/changepass0 PasswordForJanuary
+?[0m?[0;34m2023-03-05 00:05:17.590 DEBUG 70306 --- [io-28852-exec-6] a.controller.AuthenticationController    : POST api/auth/changepass1 PasswordForJanuary The password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:18.199 DEBUG 70306 --- [o-28852-exec-10] a.controller.AuthenticationController    : POST api/auth/changepass0 PasswordForFebruary
+?[0m?[0;34m2023-03-05 00:05:18.199 DEBUG 70306 --- [o-28852-exec-10] a.controller.AuthenticationController    : POST api/auth/changepass1 PasswordForFebruary The password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:18.808 DEBUG 70306 --- [io-28852-exec-1] a.controller.AuthenticationController    : POST api/auth/changepass0 PasswordForMarch
+?[0m?[0;34m2023-03-05 00:05:18.808 DEBUG 70306 --- [io-28852-exec-1] a.controller.AuthenticationController    : POST api/auth/changepass1 PasswordForMarch The password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:19.413 DEBUG 70306 --- [io-28852-exec-3] a.controller.AuthenticationController    : POST api/auth/changepass0 PasswordForApril
+?[0m?[0;34m2023-03-05 00:05:19.414 DEBUG 70306 --- [io-28852-exec-3] a.controller.AuthenticationController    : POST api/auth/changepass1 PasswordForApril The password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:20.014 DEBUG 70306 --- [io-28852-exec-2] a.controller.AuthenticationController    : POST api/auth/changepass0 PasswordForMay
+?[0m?[0;34m2023-03-05 00:05:20.014 DEBUG 70306 --- [io-28852-exec-2] a.controller.AuthenticationController    : POST api/auth/changepass1 PasswordForMay The password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:20.619 DEBUG 70306 --- [io-28852-exec-4] a.controller.AuthenticationController    : POST api/auth/changepass0 PasswordForJune
+?[0m?[0;34m2023-03-05 00:05:20.619 DEBUG 70306 --- [io-28852-exec-4] a.controller.AuthenticationController    : POST api/auth/changepass1 PasswordForJune The password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:21.228 DEBUG 70306 --- [io-28852-exec-8] a.controller.AuthenticationController    : POST api/auth/changepass0 PasswordForJuly
+?[0m?[0;34m2023-03-05 00:05:21.228 DEBUG 70306 --- [io-28852-exec-8] a.controller.AuthenticationController    : POST api/auth/changepass1 PasswordForJuly The password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:21.831 DEBUG 70306 --- [io-28852-exec-7] a.controller.AuthenticationController    : POST api/auth/changepass0 PasswordForAugust
+?[0m?[0;34m2023-03-05 00:05:21.831 DEBUG 70306 --- [io-28852-exec-7] a.controller.AuthenticationController    : POST api/auth/changepass1 PasswordForAugust The password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:22.431 DEBUG 70306 --- [io-28852-exec-5] a.controller.AuthenticationController    : POST api/auth/changepass0 PasswordForSeptember
+?[0m?[0;34m2023-03-05 00:05:22.431 DEBUG 70306 --- [io-28852-exec-5] a.controller.AuthenticationController    : POST api/auth/changepass1 PasswordForSeptember The password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:23.033 DEBUG 70306 --- [io-28852-exec-9] a.controller.AuthenticationController    : POST api/auth/changepass0 PasswordForOctober
+?[0m?[0;34m2023-03-05 00:05:23.033 DEBUG 70306 --- [io-28852-exec-9] a.controller.AuthenticationController    : POST api/auth/changepass1 PasswordForOctober The password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:23.636 DEBUG 70306 --- [io-28852-exec-6] a.controller.AuthenticationController    : POST api/auth/changepass0 PasswordForNovember
+?[0m?[0;34m2023-03-05 00:05:23.636 DEBUG 70306 --- [io-28852-exec-6] a.controller.AuthenticationController    : POST api/auth/changepass1 PasswordForNovember The password is in the hacker's database!
+?[0m?[0;34m2023-03-05 00:05:24.235 DEBUG 70306 --- [o-28852-exec-10] a.controller.AuthenticationController    : POST api/auth/changepass0 PasswordForDecember
+?[0m?[0;34m2023-03-05 00:05:24.235 DEBUG 70306 --- [o-28852-exec-10] a.controller.AuthenticationController    : POST api/auth/changepass1 PasswordForDecember The password is in the hacker's database!
+?[1;31m
+Start test 44?[0m
+?[0;34m2023-03-05 00:05:24.778  INFO 70306 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2023-03-05 00:05:24.780  INFO 70306 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+?[0m?[0;34m2023-03-05 00:05:24.833  INFO 70306 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 ?[0;34m
 ?[0m?[0;34m  .   ____          _            __ _ _
 ?[0m?[0;34m /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -217,37 +334,55 @@ Start test 28?[0m
 ?[0m?[0;34m =========|_|==============|___/=/_/_/_/
 ?[0m?[0;34m :: Spring Boot ::                (v2.5.6)
 ?[0m?[0;34m
-?[0m?[0;34m2023-01-23 14:20:54.152  INFO 7233 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication using Java 17.0.4.1 on Ahmets-MacBook-Air.local with PID 7233 (started by ahmetfikretcalikoglu in /Users/ahmetfikretcalikoglu/IdeaProjects/Account-Service/Account Service/task)
-?[0m?[0;34m2023-01-23 14:20:54.153 DEBUG 7233 --- [    Test worker] account.AccountServiceApplication        : Running with Spring Boot v2.5.6, Spring v5.3.12
-?[0m?[0;34m2023-01-23 14:20:54.153  INFO 7233 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
-?[0m?[0;34m2023-01-23 14:20:54.268  INFO 7233 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-?[0m?[0;34m2023-01-23 14:20:54.272  INFO 7233 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interfaces.
-?[0m?[0;34m2023-01-23 14:20:54.324  INFO 7233 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
-?[0m?[0;34m2023-01-23 14:20:54.324  INFO 7233 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-?[0m?[0;34m2023-01-23 14:20:54.324  INFO 7233 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-?[0m?[0;34m2023-01-23 14:20:54.335  INFO 7233 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-?[0m?[0;34m2023-01-23 14:20:54.335  INFO 7233 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 180 ms
-?[0m?[0;34m2023-01-23 14:20:54.347  INFO 7233 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-?[0m?[0;34m2023-01-23 14:20:54.351  INFO 7233 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-?[0m?[0;34m2023-01-23 14:20:54.351  INFO 7233 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../service_db'
-?[0m?[0;34m2023-01-23 14:20:54.367  INFO 7233 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-?[0m?[0;34m2023-01-23 14:20:54.369  INFO 7233 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-?[0m?[0;34m2023-01-23 14:20:54.392  INFO 7233 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-?[0m?[0;34m2023-01-23 14:20:54.392  INFO 7233 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-?[0m?[0;34m2023-01-23 14:20:54.419  INFO 7233 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b02909d, org.springframework.security.web.context.SecurityContextPersistenceFilter@387bbd7a, org.springframework.security.web.header.HeaderWriterFilter@377a1763, org.springframework.security.web.authentication.logout.LogoutFilter@7066c00a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2914f916, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22cf6c9c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4569b6a9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@655008a2, org.springframework.security.web.session.SessionManagementFilter@61f62b80, org.springframework.security.web.access.ExceptionTranslationFilter@49aa6081, org.springframework.security.web.access.intercept.AuthorizationFilter@2da273b3]
-?[0m?[0;34m2023-01-23 14:20:54.427  WARN 7233 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-?[0m?[0;34m2023-01-23 14:20:54.491  INFO 7233 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/api/auth/signup'] with []
-?[0m?[0;34m2023-01-23 14:20:54.491  INFO 7233 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/actuator/shutdown'] with []
-?[0m?[0;34m2023-01-23 14:20:54.491  INFO 7233 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/*'] with []
-?[0m?[0;34m2023-01-23 14:20:54.494  INFO 7233 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
-?[0m?[0;34m2023-01-23 14:20:54.501  INFO 7233 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
-?[0m?[0;34m2023-01-23 14:20:54.504  INFO 7233 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 0.386 seconds (JVM running for 14.699)
+?[0m?[0;34m2023-03-05 00:05:34.613  INFO 70306 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication using Java 17.0.4.1 on Ahmets-MacBook-Air.local with PID 70306 (started by ahmetfikretcalikoglu in /Users/ahmetfikretcalikoglu/IdeaProjects/Account-Service/Account Service/task)
+?[0m?[0;34m2023-03-05 00:05:34.613 DEBUG 70306 --- [    Test worker] account.AccountServiceApplication        : Running with Spring Boot v2.5.6, Spring v5.3.12
+?[0m?[0;34m2023-03-05 00:05:34.613  INFO 70306 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
+?[0m?[0;34m2023-03-05 00:05:34.715  INFO 70306 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2023-03-05 00:05:34.718  INFO 70306 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JPA repository interfaces.
+?[0m?[0;34m2023-03-05 00:05:34.754  INFO 70306 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+?[0m?[0;34m2023-03-05 00:05:34.754  INFO 70306 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2023-03-05 00:05:34.755  INFO 70306 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+?[0m?[0;34m2023-03-05 00:05:34.764  INFO 70306 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2023-03-05 00:05:34.764  INFO 70306 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 150 ms
+?[0m?[0;34m2023-03-05 00:05:34.780  INFO 70306 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+?[0m?[0;34m2023-03-05 00:05:34.784  INFO 70306 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+?[0m?[0;34m2023-03-05 00:05:34.784  INFO 70306 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../service_db'
+?[0m?[0;34m2023-03-05 00:05:34.801  INFO 70306 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2023-03-05 00:05:34.803  INFO 70306 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+?[0m?[0;34m2023-03-05 00:05:34.825  INFO 70306 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+?[0m?[0;34m2023-03-05 00:05:34.825  INFO 70306 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2023-03-05 00:05:34.852  INFO 70306 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7f746160, org.springframework.security.web.context.SecurityContextPersistenceFilter@2d05d022, org.springframework.security.web.header.HeaderWriterFilter@4973dacf, org.springframework.security.web.authentication.logout.LogoutFilter@1495f70, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2aa85cc4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28806954, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ff26b29, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@17524c36, org.springframework.security.web.session.SessionManagementFilter@5cb42eb2, org.springframework.security.web.access.ExceptionTranslationFilter@1ee37c7a, org.springframework.security.web.access.intercept.AuthorizationFilter@348d1a5e]
+?[0m?[0;34m2023-03-05 00:05:34.862  WARN 70306 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2023-03-05 00:05:34.923  INFO 70306 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/api/auth/signup'] with []
+?[0m?[0;34m2023-03-05 00:05:34.923  INFO 70306 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/actuator/shutdown'] with []
+?[0m?[0;34m2023-03-05 00:05:34.923  INFO 70306 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/*'] with []
+?[0m?[0;34m2023-03-05 00:05:34.928  INFO 70306 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+?[0m?[0;34m2023-03-05 00:05:34.937  INFO 70306 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
+?[0m?[0;34m2023-03-05 00:05:34.940  INFO 70306 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 0.349 seconds (JVM running for 37.427)
 ?[0m?[1;31m
-Start test 29?[0m
-?[0;34m2023-01-23 14:20:54.509  INFO 7233 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-?[0m?[0;34m2023-01-23 14:20:54.509  INFO 7233 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-?[0m?[0;34m2023-01-23 14:20:54.510  INFO 7233 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-?[0m?[0;34m2023-01-23 14:20:54.666 DEBUG 7233 --- [io-28852-exec-1] account.controller.BusinessController    : GET /api/empl/payment1 /Id: 1 name: John lastname: Doe email: johndoe@acme.com username: johndoe@acme.com password: $2a$10$4a08mAl8DoOzFQ6ir4CLUOenLr4zUGjX0gToLqWOTRKjETUchcsT6
+Start test 45?[0m
+?[0;34m2023-03-05 00:05:34.942  INFO 70306 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+?[0m?[0;34m2023-03-05 00:05:34.942  INFO 70306 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+?[0m?[0;34m2023-03-05 00:05:34.943  INFO 70306 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+?[0m?[0;34m2023-03-05 00:05:36.147 DEBUG 70306 --- [io-28852-exec-1] account.controller.BusinessController    : GET /api/empl/payment1 /Id: 2 name: Max lastname: Mustermann email: maxmustermann@acme.com username: maxmustermann@acme.com password: $2a$13$d0C8tfMaxhVmdOLR3cZWAuo91hw9Sj9LvP1FGtSfoVYpwVAKl4IPS
+?[1;31m
+Start test 46?[0m
+?[0;34m2023-03-05 00:05:36.756 DEBUG 70306 --- [io-28852-exec-2] a.controller.AuthenticationController    : POST api/auth/changepass0 aNob5VvqzRtb
+?[0m?[0;34m2023-03-05 00:05:37.362 DEBUG 70306 --- [io-28852-exec-2] a.controller.AuthenticationController    : POST api/auth/changepass2 aNob5VvqzRtb updated for userjohndoe@acme.com
+?[1;31m
+Start test 47?[0m
+?[1;31m
+Start test 48?[0m
+?[0;34m2023-03-05 00:05:39.177 DEBUG 70306 --- [io-28852-exec-6] account.controller.BusinessController    : GET /api/empl/payment1 /Id: 1 name: John lastname: Doe email: johndoe@acme.com username: johndoe@acme.com password: $2a$13$ikbApn7Ud5l4JIRxyB7Zg.L0lKSJcGRPakJRwKV5wEvgROZVrWEXK
+?[1;31m
+Start test 49?[0m
+?[0;34m2023-03-05 00:05:39.782 DEBUG 70306 --- [io-28852-exec-8] a.controller.AuthenticationController    : POST api/auth/changepass0 aNob5VvqzRtb
+?[0m?[0;34m2023-03-05 00:05:40.382 DEBUG 70306 --- [io-28852-exec-8] a.controller.AuthenticationController    : POST api/auth/changepass2 aNob5VvqzRtb updated for usermaxmustermann@acme.com
+?[1;31m
+Start test 50?[0m
+?[1;31m
+Start test 51?[0m
+?[0;34m2023-03-05 00:05:42.196 DEBUG 70306 --- [io-28852-exec-3] account.controller.BusinessController    : GET /api/empl/payment1 /Id: 2 name: Max lastname: Mustermann email: maxmustermann@acme.com username: maxmustermann@acme.com password: $2a$13$ffjWzBSH7wIc9ca48Dd0ROnY7DBJnAIPBJZWIXYdleFLEMigI7yKm
 </pre>
 </span>
 </div>
@@ -259,7 +394,7 @@ Start test 29?[0m
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at Jan 23, 2023, 2:20:55 PM</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at Mar 5, 2023, 12:05:42 AM</p>
 </div>
 </div>
 </body>

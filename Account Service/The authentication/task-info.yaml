@@ -500,15 +500,9 @@ files:
 - name: src/account/security/SecurityParams.java
   visible: true
   learner_created: true
-- name: account-service.log
-  visible: true
-  learner_created: true
-- name: account-service.log.2023-01-22.0.gz
-  visible: true
-  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/16602#comment
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Mon, 23 Jan 2023 11:20:55 UTC"
-record: -1
+  time: "Mon, 23 Jan 2023 11:27:34 UTC"
+record: 2

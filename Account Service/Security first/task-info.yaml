@@ -518,6 +518,429 @@ files:
       };
     }
   learner_created: false
+- name: src/account/security/RestAuthenticationEntryPoint.java
+  visible: true
+  text: |+
+    package account.security;
+
+    import org.springframework.security.core.AuthenticationException;
+    import org.springframework.security.web.AuthenticationEntryPoint;
+    import org.springframework.stereotype.Component;
+
+    import javax.servlet.ServletException;
+    import javax.servlet.http.HttpServletRequest;
+    import javax.servlet.http.HttpServletResponse;
+    import java.io.IOException;
+
+    @Component
+    public class RestAuthenticationEntryPoint implements AuthenticationEntryPoint {
+
+        @Override
+        public void commence(HttpServletRequest request, HttpServletResponse response,
+                             AuthenticationException authException) throws IOException, ServletException {
+            response.sendError(HttpServletResponse.SC_UNAUTHORIZED, authException.getMessage());
+        }
+    }
+
+  learner_created: true
+- name: src/account/business/UserInfoService.java
+  visible: true
+  text: |
+    package account.business;
+
+    import account.entity.UserInfo;
+    import account.persistence.UserInfoRepository;
+    import account.security.SecurityParams;
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.security.core.userdetails.User;
+    import org.springframework.security.core.userdetails.UserDetails;
+    import org.springframework.security.core.userdetails.UserDetailsService;
+    import org.springframework.security.core.userdetails.UsernameNotFoundException;
+    import org.springframework.security.crypto.password.PasswordEncoder;
+    import org.springframework.stereotype.Component;
+
+    @Component
+    public class UserInfoService implements UserDetailsService {
+
+        private final UserInfoRepository userInfoRepository;
+
+        @Autowired
+        public UserInfoService(UserInfoRepository userInfoRepository) {
+            this.userInfoRepository = userInfoRepository;
+        }
+        @Autowired
+        PasswordEncoder passwordEncoder;
+
+        public UserInfo loadUserByEmail(String email) {
+            return userInfoRepository.findUserInfoByEmail(email);
+        }
+
+        @Override
+        public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+            UserInfo userInfo = userInfoRepository.findUserInfoByEmail(username.toLowerCase());
+            if (userInfo == null) {
+                throw new UsernameNotFoundException(username);
+            }
+            User user = new User(userInfo.getUsername(), userInfo.getPassword(), SecurityParams.ROLE_USER);
+            return user; //new MyUserPrincipal(user);
+        }
+
+
+        public UserInfo save(UserInfo userInfo) {
+            return userInfoRepository.save(userInfo);
+        }
+
+        public UserInfo saveFirstTime(UserInfo userInfo) {
+            userInfo.setPassword(passwordEncoder.encode(userInfo.getPassword()));
+            return save(userInfo);
+        }
+    }
+  learner_created: true
+- name: src/account/security/SecurityParams.java
+  visible: true
+  text: |
+    package account.security;
+
+    import org.springframework.security.core.GrantedAuthority;
+    import org.springframework.security.core.authority.AuthorityUtils;
+
+    import java.util.Collections;
+    import java.util.List;
+
+    public class SecurityParams {
+
+        public static final List<GrantedAuthority> ROLE_USER = Collections
+                .unmodifiableList(AuthorityUtils.createAuthorityList("USER"));
+
+        public static final List<GrantedAuthority> ROLE_ANONIMOUS = Collections
+                .unmodifiableList(AuthorityUtils.createAuthorityList("ANONIMOUS"));
+
+        public static final List<GrantedAuthority> ROLE_MERCHANT = Collections
+                .unmodifiableList(AuthorityUtils.createAuthorityList("MERCHANT"));
+
+        public static final List<GrantedAuthority> ROLE_ADMINISTRATOR = Collections
+                .unmodifiableList(AuthorityUtils.createAuthorityList("ADMINISTRATOR"));
+
+        public static final List<GrantedAuthority> ROLE_SUPPORT = Collections
+                .unmodifiableList(AuthorityUtils.createAuthorityList("SUPPORT"));
+
+    }
+  learner_created: true
+- name: src/account/controller/AuthenticationController.java
+  visible: true
+  text: |
+    package account.controller;
+
+    import account.business.UserInfoService;
+    import account.entity.UserInfo;
+    import org.apache.logging.log4j.LogManager;
+    import org.apache.logging.log4j.Logger;
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.http.HttpStatus;
+    import org.springframework.http.ResponseEntity;
+    import org.springframework.security.core.userdetails.UserDetails;
+    import org.springframework.stereotype.Controller;
+    import org.springframework.web.bind.annotation.PostMapping;
+    import org.springframework.web.bind.annotation.RequestBody;
+
+    import javax.validation.Valid;
+
+    @Controller
+    public class AuthenticationController {
+        @Autowired
+        UserInfoService userInfoService;
+        private static final Logger logger = LogManager.getLogger(AuthenticationController.class);
+
+        //POST api/auth/signup
+        @PostMapping (value = "/api/auth/signup", produces="application/json")
+        public ResponseEntity signupEndpoint ( @Valid @RequestBody UserInfo userInfo) {
+            userInfo.setEmail(userInfo.getEmail().toLowerCase());
+            UserInfo user1 = userInfoService.loadUserByEmail(userInfo.getEmail());
+            if(user1 != null) {
+                logger.debug("POST /api/auth/signup user1 User exist!" + " " + user1.getUsername());
+                return ResponseEntity.status(400).body("{\n" +
+                        "    \"timestamp\": \"data\",\n" +
+                        "    \"status\": 400,\n" +
+                        "    \"error\": \"Bad Request\",\n" +
+                        "    \"message\": \"User exist!\",\n" +
+                        "    \"path\": \"/api/auth/signup\"\n" +
+                        "}");
+            }
+            UserInfo savedUser = userInfoService.saveFirstTime(userInfo);
+            logger.debug("POST /api/auth/signup user2 " + userInfo.toDebugString());
+            return ResponseEntity.status(HttpStatus.OK).body(savedUser.new UserView());
+        }
+
+
+
+    }
+  learner_created: true
+- name: src/account/security/SecurityConfiguration.java
+  visible: true
+  text: |
+    package account.security;
+
+
+    import account.business.UserInfoService;
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.context.annotation.Bean;
+    import org.springframework.context.annotation.Configuration;
+    import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+    import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+    import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
+    import org.springframework.security.config.http.SessionCreationPolicy;
+    import org.springframework.security.core.userdetails.UserDetailsService;
+    import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+    import org.springframework.security.crypto.password.PasswordEncoder;
+    import org.springframework.security.web.SecurityFilterChain;
+
+    @Configuration
+    public class SecurityConfiguration {
+
+        @Autowired
+        RestAuthenticationEntryPoint restAuthenticationEntryPoint;
+
+        @Autowired
+        UserInfoService userInfoService;
+
+        @Bean
+        public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+            http
+                    .httpBasic()
+                    .authenticationEntryPoint(restAuthenticationEntryPoint)
+                    .and()
+                    .authorizeHttpRequests((authz) -> authz.anyRequest().authenticated())
+                    .csrf().disable().headers().frameOptions().disable()
+                    .and()
+                    .sessionManagement()
+                    .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+            return http.build();
+        }
+
+        @Bean
+        public WebSecurityCustomizer webSecurityCustomizer() {
+            return (web) -> web.ignoring().antMatchers("/api/auth/signup", "/actuator/shutdown", "/h2-console/*");
+        }
+
+        @Bean
+        public DaoAuthenticationProvider authProvider() {
+            final DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
+            authProvider.setUserDetailsService((UserDetailsService) userInfoService);
+            authProvider.setPasswordEncoder(passwordEncoder());
+            return authProvider;
+        }
+        @Bean
+        public PasswordEncoder passwordEncoder() {
+            return new BCryptPasswordEncoder();
+        }
+
+    //    @Bean
+    //    public UserDetailsService userDetailsService() {
+    //        UserDetails user =
+    //                User.withDefaultPasswordEncoder()
+    //                        .username("user")
+    //                        .password("password")
+    //                        .roles("USER")
+    //                        .build();
+    //
+    //        return new InMemoryUserDetailsManager(user);
+    //    }
+
+    }
+  learner_created: true
+- name: src/account/entity/UserInfo.java
+  visible: true
+  text: |
+    package account.entity;
+
+    import com.fasterxml.jackson.annotation.JsonIgnore;
+    import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+    import org.springframework.security.core.userdetails.UserDetails;
+
+    import javax.persistence.*;
+    import javax.validation.constraints.Email;
+    import javax.validation.constraints.NotEmpty;
+    import javax.validation.constraints.Pattern;
+
+    @Entity
+    @Table
+    @JsonPropertyOrder ({"name","lastname","email","password"})
+    public class UserInfo {
+
+        @Id
+        @JsonIgnore
+        @Column
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Long userId;
+        @NotEmpty
+        @Column
+        String name;
+
+        @NotEmpty
+        @Column
+        String lastname;
+
+        @NotEmpty
+        @Column
+        @Email
+        @Pattern(regexp = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@acme.com")
+        String email;
+
+        @NotEmpty
+        @Column
+        String password;
+
+        public UserInfo(){}
+        public UserInfo(UserDetails user1) {
+            this.email = user1.getUsername();
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getLastname() {
+            return lastname;
+        }
+
+        public void setLastname(String lastname) {
+            this.lastname = lastname;
+        }
+
+        public String getEmail() {
+            return email;
+        }
+
+        public void setEmail(String email) {
+            this.email = email;
+        }
+
+        public String getPassword() {
+            return password;
+        }
+
+        public void setPassword(String password) {
+            this.password = password;
+        }
+
+        public String getUsername() {
+            return this.email.toLowerCase();
+        }
+
+        public String toDebugString() {
+            return ( "/Id: " + this.userId + " name: " + this.name + " lastname: " + this.lastname + " email: "
+                    + this.email + " username: " + this.getUsername() + " password: " + this.getPassword());
+        }
+
+
+        @JsonPropertyOrder ({"id", "name","lastname","email"})
+        public class UserView {
+
+            public long getId() {
+                return userId;
+            }
+
+            public String getName() {
+                return name;
+            }
+
+             public String getLastname() {
+                return lastname;
+            }
+
+            public String getEmail() {
+                return email;
+            }
+
+        }
+    }
+
+    /*
+    {
+            "name": "John",
+            "lastname": "Doe",
+            "email": "johndoe@acme.com",
+            "password": "secret"
+    }
+    */
+  learner_created: true
+- name: src/account/controller/BusinessController.java
+  visible: true
+  text: |
+    package account.controller;
+
+    import account.business.UserInfoService;
+    import account.entity.UserInfo;
+    import org.apache.logging.log4j.LogManager;
+    import org.apache.logging.log4j.Logger;
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.http.HttpStatus;
+    import org.springframework.http.ResponseEntity;
+    import org.springframework.security.core.annotation.AuthenticationPrincipal;
+    import org.springframework.security.core.userdetails.UserDetails;
+    import org.springframework.stereotype.Controller;
+    import org.springframework.web.bind.annotation.GetMapping;
+
+    @Controller
+    public class BusinessController {
+
+        @Autowired
+        UserInfoService userInfoService;
+        private static final Logger logger = LogManager.getLogger(BusinessController.class);
+
+        //GET api/empl/payment/
+        @GetMapping (value = "/api/empl/payment", produces="application/json")
+        public ResponseEntity paymentList (@AuthenticationPrincipal UserDetails details) {
+            UserInfo user1 = userInfoService.loadUserByEmail(details.getUsername());
+            logger.debug("GET /api/empl/payment1 " + user1.toDebugString());
+            return ResponseEntity.status(HttpStatus.OK).body(user1.new UserView());
+        }
+    }
+  learner_created: true
+- name: src/account/persistence/UserInfoRepository.java
+  visible: true
+  text: |+
+    package account.persistence;
+
+
+    import account.entity.UserInfo;
+    import org.springframework.data.repository.CrudRepository;
+    import org.springframework.stereotype.Repository;
+
+    import java.util.List;
+
+    @Repository
+    public interface UserInfoRepository extends CrudRepository<UserInfo, Long> {
+        UserInfo findUserInfoByUserId(Long userId);
+
+        UserInfo findUserInfoByEmail(String username);
+
+        List<UserInfo> findAll();
+        UserInfo save(UserInfo toSave);
+
+    }
+
+
+  learner_created: true
+- name: src/account/entity/UpdateInfo.java
+  visible: true
+  learner_created: true
+- name: src/account/security/IAuthenticationFacade.java
+  visible: true
+  learner_created: true
+- name: src/account/entity/PasswordParams.java
+  visible: true
+  learner_created: true
+- name: src/account/security/AuthenticationFacade.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/16603#comment
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sat, 04 Mar 2023 21:05:42 UTC"
+record: 3
